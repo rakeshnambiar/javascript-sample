@@ -1,0 +1,21 @@
+{
+  "name": "protractordemo",
+  "version": "1.0.0",
+  "description": "Protractor Demo for EPMC application",
+  "main": "config/conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "jasmine-reporters": "^2.3.0",
+    "protractor-html-reporter": "^1.3.2",
+    "protractor-jasmine2-html-reporter": "^0.0.7",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "protractor ./config/conf.js"
+  },
+  "author": "Rakesh Choorikkadu",
+  "license": "ISC"
+}
