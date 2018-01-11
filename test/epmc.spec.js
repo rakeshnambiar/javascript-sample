@@ -48,22 +48,22 @@ describe ("Verify the EPMC Search functionality", function() {
       
 
     //tests
-    // it("Search By PMCID", function() {
-    //     //await browser.get('http://www.europepmc.org/');
-    //     var article_page = home_page.performUniqueSearch(searchTerms.pmcid); 
-    //     expect(article_page.getResultFoundText()).toContain('result found');
-    // });
+    it("Search By PMCID", function() {
+        //await browser.get('http://www.europepmc.org/');
+        var article_page = home_page.performUniqueSearch(searchTerms.pmcid); 
+        expect(article_page.getResultFoundText()).toContain('result found');
+    });
 
-    // it("Search By EXT_ID", function() {
-    //     var article_page = home_page.performUniqueSearch(searchTerms.pmid); 
-    //     expect(article_page.getResultFoundText()).toContain('result found');
-    // });
+    it("Search By EXT_ID", function() {
+        var article_page = home_page.performUniqueSearch(searchTerms.pmid); 
+        expect(article_page.getResultFoundText()).toContain('result found');
+    });
 
     it("Search By term/keyword and select an item from the Results page", function() {
         var results_page = home_page.performSearch(searchTerms.keyword); 
         expect(results_page.isSearchResultsPageLoaded()).toBe(true);
         browser.takeScreenshot().then(function (png) {
-            writeScreenShot(png, 'target/search_results.png');
+            writeScreenShot(png, './target/search_results.png');
         });
         var article_page = results_page.selectAnItem(5);
         expect(article_page.isTitleDisplayed()).toBe(true);
