@@ -2,25 +2,26 @@ var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 var jasmineReporters = require('jasmine-reporters');
 
 exports.config = {
-  directConnect: false,
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  directConnect: true,
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumAddress: 'http://ec2-34-215-149-100.us-west-2.compute.amazonaws.com:4444/wd/hub',
   // Capabilities to be passed to the webdriver instance.
 
-  // capabilities: {
-  //   browserName: 'chrome',
-  //   // chromeOptions: {
-  //   //   args: [ "--headless", "--disable-gpu", "--window-size=800x600" ]
-  //   // }
-  // },
+  capabilities: {
+    browserName: 'firefox',
+    // chromeOptions: {
+    //   args: [ "--headless", "--disable-gpu", "--window-size=800x600" ]
+    // }
+  },
 
   // Parallel Execution
-  multiCapabilities:  [{
-    browserName: 'firefox'
-  }, {
-    browserName: 'chrome'
-    //  }, {
-    //   browserName: 'internet explorer',
-  }],
+  // multiCapabilities:  [{
+  //   browserName: 'firefox'
+  // }, {
+  //   browserName: 'chrome'
+  //   //  }, {
+  //   //   browserName: 'internet explorer',
+  // }],
 
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',

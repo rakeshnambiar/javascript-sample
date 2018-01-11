@@ -2,15 +2,17 @@ var article_page = require('../pages/article_page.js');
 var results_page = require('../pages/search_results_page.js');
 
 var home_page = function () {
-    
+    var searchButton = element(by.id('banner--search-button'));
+    var searchTextBox = element(by.id('banner--search-input'));
+
     this.isSearchButtonDisplayed =  function() {
-        return element(by.id('banner--search-button')).isPresent();
+        return searchButton.isPresent();
     };
 
     this.performUniqueSearch = function(keyword) {
         try{
-            element(by.id('banner--search-input')).sendKeys(keyword);
-            element(by.id('banner--search-button')).click();
+            searchTextBox.sendKeys(keyword);
+            searchButton.click();
         } catch(error){
             throw ("Error while peforming performUniqueSearch - "+ keyword);
         }    
@@ -19,8 +21,8 @@ var home_page = function () {
 
     this.performSearch = function(keyword) {
         try{
-            element(by.id('banner--search-input')).sendKeys(keyword);
-            element(by.id('banner--search-button')).click();
+            searchTextBox.sendKeys(keyword);
+            searchButton.click();
         } catch(error) {
             throw ("Error while peforming performSearch - "+ keyword);
         }    
