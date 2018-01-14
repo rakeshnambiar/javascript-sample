@@ -4,7 +4,8 @@ var jasmineReporters = require('jasmine-reporters');
 exports.config = {
   directConnect: false,
   //seleniumAddress: 'http://localhost:4444/wd/hub',
-  seleniumAddress: 'http://ec2-34-213-66-164.us-west-2.compute.amazonaws.com:4446/wd/hub',
+  seleniumAddress: 'http://ec2-34-211-171-253.us-west-2.compute.amazonaws.com:4444/wd/hub',
+  //seleniumAddress: 'http://myhub-rak-demo-project.7e14.starter-us-west-2.openshiftapps.com/wd/hub',
   // Capabilities to be passed to the webdriver instance.
 
   capabilities: {
