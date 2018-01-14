@@ -2,9 +2,9 @@ var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 var jasmineReporters = require('jasmine-reporters');
 
 exports.config = {
-  directConnect: true,
+  directConnect: false,
   //seleniumAddress: 'http://localhost:4444/wd/hub',
-  //seleniumAddress: 'http://ec2-34-215-149-100.us-west-2.compute.amazonaws.com:4444/wd/hub',
+  seleniumAddress: 'http://ec2-34-213-66-164.us-west-2.compute.amazonaws.com:4446/wd/hub',
   // Capabilities to be passed to the webdriver instance.
 
   capabilities: {
